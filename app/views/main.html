@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <h1>Login</h1>
+
+        <form role="form">
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                <label for="exampleInputEmail1">Email Addresse</label>
+                <input ng-model="user.email" type="email" class="form-control" id="exampleInputEmail1"
+                       placeholder="meineEmailt@domain.de" required>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-3">
+                <label for="exampleInputPassword1">Passwort</label>
+                <input type="password" ng-model="user.pw" class="form-control" id="exampleInputPassword1"
+                       placeholder="Passwort" required>
+            </div>
+            <div class="checkbox col-xs-12">
+                <label>
+                    <input type="checkbox" ng-model="user.remember"> Erinner dich an mich!
+                </label>
+            </div>
+            <div class="col-xs-12">
+                <button type="submit" ng-click="login()" class="btn btn-default">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
