@@ -23,14 +23,60 @@
     <div class="container">
       <div class="header" ng-controller="NavigatorCtrl">
 
-        <ul class="nav nav-pills pull-right" >
-          <li><p style="font-size: 16px;padding-top: 8px;padding-right: 10px;" ng-show="loggedIn">Angemeldet als {{user.email}}</p></li>
+
+          <header class="page-header" ng-show="loggedIn">
+              <div class="navbar">
+                  <h3 class="text-muted pull-left">aktien</h3>
+                  <ul class="nav navbar-nav navbar-right pull-right">
+
+                      <li class="divider"></li>
+                      <li class="hidden-xs">
+                          <a href="#" id="settings"
+                             title="Settings"
+                             data-toggle="popover"
+                             data-placement="bottom">
+                              <i class="fa fa-cog"></i>
+                          </a>
+                      </li>
+                      <li class="hidden-xs dropdown">
+                          <a title="{{user.email}}" id="account"
+                             class="dropdown-toggle"
+                             data-toggle="dropdown">
+                              <i class="fa fa-user"></i>
+                          </a>
+                          <ul id="account-menu" class="dropdown-menu account" role="menu">
+                              <li role="presentation" class="account-picture">
+                                  <p style="font-size: 12px;color:#000;">
+                                      {{user.email}}</p>
+                              </li>
+
+                          </ul>
+                      </li>
+                      <li class="visible-xs">
+                          <a href="#"
+                             class="btn-navbar"
+                             data-toggle="collapse"
+                             data-target=".sidebar"
+                             title="">
+                              <i class="fa fa-bars"></i>
+                          </a>
+                      </li>
+                      <li class="hidden-xs"><a ng-click="logout()" ng-href="#"><i class="fa fa-sign-out"></i></a></li>
+                  </ul>
+
+                  <div class="notifications pull-right">
+                      <div class="alert pull-right">
+                          <a href="#" class="close" data-dismiss="alert">&times;</a>
+                          <i class="fa fa-info-circle"></i> Sie sind als {{user.email}} angelmedet.
+                      </div>
+                  </div>
+              </div>
+          </header>
+          <ul class="nav nav-pills pull-right" >
           <li ng-hide="loggedIn" class="active"><a ng-href="#">Home</a></li>
           <li ng-hide="loggedIn"><a ng-href="#/about">About</a></li>
           <li ng-hide="loggedIn"><a ng-href="#">Contact</a></li>
-          <li class="active" style="cursor: pointer"><a ng-click="logout()" ng-show="loggedIn">Logout</a></li>
-        </ul>
-        <h3 class="text-muted">aktien</h3>
+          </ul>
       </div>
 
       <div ng-view=""></div>
@@ -91,6 +137,7 @@
     <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
     <script src="bower_components/d3/d3.js"></script>
     <script src="bower_components/angular-charts/dist/angular-charts.js"></script>
+    <script src="bower_components/datejs/build/production/date.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -103,7 +150,8 @@
         <script src="scripts/services/markit.js"></script>
         <script src="scripts/services/user.js"></script>
         <script src="scripts/controllers/navigator.js"></script>
-        <!-- endbuild -->
+    <script src="scripts/services/yql.js"></script>
+    <!-- endbuild -->
 
 
 </body>

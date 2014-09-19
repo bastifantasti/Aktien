@@ -80,7 +80,8 @@ angular.module('aktienApp')
             logOut:logOut,
             registerObserverCallback:registerObserverCallback,
             notifyObservers:notifyObservers,
-            authClient:authClient
+            authClient: authClient,
+            ref: ref
 
         };
   });

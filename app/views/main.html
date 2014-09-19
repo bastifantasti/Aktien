@@ -1,26 +1,84 @@
-<div class="container">
-    <div class="row">
-        <h1>Login</h1>
+<div class="single-widget-container">
+    <section class="widget login-widget">
+        <header class="text-align-center">
+            <h4>Login</h4>
+        </header>
+        <div class="body">
+            <form class="no-margin">
+                <fieldset>
+                    <div class="form-group no-margin">
+                        <label for="email">Email</label>
 
-        <form role="form">
-            <div class="form-group col-xs-12 col-sm-6 col-md-3">
-                <label for="exampleInputEmail1">Email Addresse</label>
-                <input ng-model="user.email" type="email" class="form-control" id="exampleInputEmail1"
-                       placeholder="meineEmailt@domain.de" required>
-            </div>
-            <div class="form-group col-xs-12 col-sm-6 col-md-3">
-                <label for="exampleInputPassword1">Passwort</label>
-                <input type="password" ng-model="user.pw" class="form-control" id="exampleInputPassword1"
-                       placeholder="Passwort" required>
-            </div>
-            <div class="checkbox col-xs-12">
-                <label>
-                    <input type="checkbox" ng-model="user.remember"> Erinner dich an mich!
-                </label>
-            </div>
-            <div class="col-xs-12">
-                <button type="submit" ng-click="login()" class="btn btn-default">Login</button>
-            </div>
-        </form>
-    </div>
+                        <div class="input-group input-group-lg">
+                                <span class="input-group-addon">
+                                    <i class="eicon-user"></i>
+                                </span>
+                            <input id="email" ng-model="user.email" type="email" class="form-control input-lg"
+                                   placeholder="deineEmail@domain.de">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <div class="input-group input-group-lg">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            <input id="password" ng-model="user.pw" type="password" class="form-control input-lg"
+                                   placeholder="- - - - - -">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" ng-model="user.remember"> Erinner dich an mich!
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-block btn-lg btn-danger" ng-click="login()">
+                        <span class="small-circle"><i class="fa fa-caret-right"></i></span>
+                        <small>Sign In</small>
+                    </button>
+                    <div class="forgot"><a class="forgot" href="#">Passwort vergessen?</a></div>
+                </div>
+            </form>
+        </div>
+        <!--
+                <footer>
+                    <div class="facebook-login">
+                        <a href="index.html"><span><i class="fa fa-facebook-square fa-lg"></i> LogIn with Facebook</span></a>
+                    </div>
+                </footer>-->
+    </section>
 </div>
+<!--
+<div class="container">
+<div class="row">
+<h1>Login</h1>
+
+<form role="form">
+    <div class="form-group col-xs-12 col-sm-6 col-md-3">
+        <label for="exampleInputEmail1">Email Addresse</label>
+        <input ng-model="user.email" type="email" class="form-control" id="exampleInputEmail1"
+               placeholder="meineEmailt@domain.de" required>
+    </div>
+    <div class="form-group col-xs-12 col-sm-6 col-md-3">
+        <label for="exampleInputPassword1">Passwort</label>
+        <input type="password" ng-model="user.pw" class="form-control" id="exampleInputPassword1"
+               placeholder="Passwort" required>
+    </div>
+    <div class="checkbox col-xs-12">
+        <label>
+            <input type="checkbox" ng-model="user.remember"> Erinner dich an mich!
+        </label>
+    </div>
+    <div class="col-xs-12">
+        <button type="submit" ng-click="login()" class="btn btn-default">Login</button>
+    </div>
+</form>
+</div>
+</div>
+-->
